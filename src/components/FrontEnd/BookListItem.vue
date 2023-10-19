@@ -3,7 +3,7 @@
         <div class="card  h-100">
             <div class="text-center mt-2">
                 <router-link :to="{ name: 'BookDetail', params: { id: book.bookid }}">
-                    <img :src="book.thumbnailUrl" style="width: 200px;" class="card-img-top" alt="..." />
+                    <img :src="apiUrl+'/books/cover/'+book.bookid" style="width: 200px;" class="card-img-top" alt="..." />
                 </router-link>
             </div>
             <div class="card-body">
@@ -37,6 +37,8 @@
 
     const props = defineProps(["book"])
     const book=props.book
+
+    const apiUrl=import.meta.env.VITE_API_URL
 
 </script>
 

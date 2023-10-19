@@ -21,7 +21,7 @@
                             <tr v-if="store.cartItems.length>0" v-for="(item,index) in store.cartItems" :key="item.id">
                                 <td>{{index+1}}</td>
                                 <td>
-                                    <img :src="item.thumbnailUrl" 
+                                    <img :src="apiUrl+'/books/cover/'+item.bookid" 
                                     class="fluid rounded" 
                                     width="100" 
                                     :alt="item.title" />
